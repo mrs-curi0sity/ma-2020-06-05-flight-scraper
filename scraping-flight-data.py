@@ -20,8 +20,8 @@ from botocore.exceptions import ClientError
 
 # aws s3 config
 # workaround for missing credentials
-os.environ["AWS_ACCESS_KEY_ID"] = "test"
-os.environ["AWS_SECRET_ACCESS_KEY"] = "test"
+print(f'AWS_ACCESS_KEY_ID: {os.environ["AWS_ACCESS_KEY_ID"]}')
+print(f'AWS_SECRET_ACCESS_KEY: {os.environ["AWS_SECRET_ACCESS_KEY"]}')
 s3_client = boto3.client('s3')
 BUCKET_NAME = 'ma-2020-06-flight-scraper'
 FILE_NAME = 'flight_count.csv'
