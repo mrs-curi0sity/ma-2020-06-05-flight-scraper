@@ -85,7 +85,7 @@ def update_flights(n):
 
         time_list.append(now)
         counter_list.append(counter)
-        print(f'[INFO] fetched new data: {now}, flight count is {counter}. Will continue iteration until time is {end_time}')
+        print(f'[INFO] fetched new data: {now}, flight count is {counter}.')
         
         # add line to df_flight_count_all
         df_flight_counter_current = pd.DataFrame({'timestamp': time_list, 'active_flights_count': count_list})
