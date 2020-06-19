@@ -88,7 +88,7 @@ def update_flights(n):
         print(f'[INFO] fetched new data: {now}, flight count is {counter}.')
         
         # add line to df_flight_count_all
-        df_flight_counter_current = pd.DataFrame({'timestamp': time_list, 'active_flights_count': count_list})
+        df_flight_counter_current = pd.DataFrame({'timestamp': time_list, 'active_flights_count': counter_list})
         df_flight_count_all = pd.concat([df_previous_flight_count, df_flight_counter_current])#.sort_values(by = 'timestamp').drop_duplicates()
 
         print(f'[INFO previous] {df_previous_flight_count.tail(2)}')
