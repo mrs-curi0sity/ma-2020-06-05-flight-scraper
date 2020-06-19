@@ -76,7 +76,7 @@ def update_flights(n):
     counter = scrape_count()
     
     # only write every 5 minutes
-    if now.minute % SAVE_INTERVAL_IN_MINUTES == 0:
+    if (now.minute % SAVE_INTERVAL_IN_MINUTES == 0) & (now.second < 20):
     
         # read in previous data
         obj = s3_client.get_object(Bucket= BUCKET_NAME , Key = FILE_NAME)
