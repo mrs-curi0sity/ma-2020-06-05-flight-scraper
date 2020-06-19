@@ -81,7 +81,7 @@ def update_flights(n):
     # but only save after 5 minutes
     now = datetime.now()
     time_list = []
-    count_list = []
+    counter_list = []
     while now < end_time:
         now = datetime.now()
         counter = scrape_count()
