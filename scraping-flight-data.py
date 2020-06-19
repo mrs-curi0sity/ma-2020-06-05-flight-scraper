@@ -70,13 +70,13 @@ def scrape_count():
 @app.callback(Output('counter-text', 'children'),
              [Input('interval-component', 'n_intervals')])
 def update_flights(n):
-    start_time = datetime.now()
+    now = datetime.now()
     time_list = []
     counter_list = []
     counter = scrape_count()
     
     # only write every 5 minutes
-    if start_time.minute % SAVE_INTERVAL_IN_MINUTES == 0:
+    if now.minute % SAVE_INTERVAL_IN_MINUTES == 0:
     
         # read in previous data
         obj = s3_client.get_object(Bucket= BUCKET_NAME , Key = FILE_NAME)
