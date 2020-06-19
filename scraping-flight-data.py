@@ -88,6 +88,8 @@ def update_flights(n):
         counter = scrape_count()
         time_list.append(now)
         counter_list.append(counter)
+        print(f'[INFO] fetched new data: {now}, flight count is {counter}. Will continue iteration until time is {end_time}')
+        print(f'[INFO] ... sleeping for {SCRAPE_INTERVAL_IN_SECONDS} seconds')
         time.sleep(SCRAPE_INTERVAL_IN_SECONDS)
         
         
