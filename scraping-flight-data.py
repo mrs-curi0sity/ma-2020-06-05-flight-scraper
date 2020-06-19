@@ -48,7 +48,7 @@ app.layout = html.Div([
     ]),
     html.Div([
         html.Pre(id = 'counter-text',
-                children = 'Number of flights right now'),
+                children = f'Number of flights right now ({datetime.now()})'),
         dcc.Interval(id = 'interval-component',
                     interval = SAVE_INTERVAL_IN_SECONDS * 1000,  # milliseconds
                     n_intervals = 0),
