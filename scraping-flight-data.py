@@ -9,6 +9,7 @@ import plotly.graph_objs as go
 import io
 import os
 import requests
+import time
 from datetime import datetime, timedelta
 import pandas as pd
 
