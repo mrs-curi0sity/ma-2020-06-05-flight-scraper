@@ -118,7 +118,7 @@ def update_graph(n):
         data = [go.Scatter(
             x = flight_count['timestamp'],
             y = flight_count['active_flights_count'],
-            mode = 'lines+markers'
+            mode = 'markers'
         )]
     ) 
     return figure
