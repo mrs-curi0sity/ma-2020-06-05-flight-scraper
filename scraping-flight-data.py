@@ -28,7 +28,7 @@ s3_client = boto3.client('s3')
 BUCKET_NAME = 'ma-2020-06-flight-scraper'
 FILE_NAME = 'flight_count.csv'
 UPDATE_INTERVAL_IN_SECONDS = 15 # this has to be smaller than 30 in order to avoid Heroku H12 - Request timeout error
-SAVE_INTERVAL_IN_MINUTES = 5 # only save every 10 minutes
+SAVE_INTERVAL_IN_MINUTES = 10 # only save every 10 minutes
 
 # dash credentials
 USERNAME_PASSWORD_PAIRS = [['peter', 'lustig'], ['schnett', 'schnoo']]
